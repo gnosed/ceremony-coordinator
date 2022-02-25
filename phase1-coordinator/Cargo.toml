@@ -13,11 +13,16 @@ name = "phase1-coordinator"
 path = "src/main.rs"
 required-features = ["parallel"]
 
+[[bin]]
+name = "coordinator-server"
+path = "src/server.rs"
+
 [dependencies]
 phase1 = { path = "../phase1" }
 setup-utils = { path = "../setup-utils" }
 snarkvm-curves = { git = "https://github.com/AleoHQ/snarkVM.git", rev = "fc997c" }
 
+rocket = "0.5.0-rc.1"
 anyhow = { version = "1.0.37" }
 fs-err = { version = "2.6.0" }
 itertools = "0.10"
